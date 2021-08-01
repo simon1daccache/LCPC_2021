@@ -48,10 +48,59 @@ void problem3_B() {
 
 }
 
+/*
+solution 1
+
+if (t < 10) {
+		cout << "1";
+	}
+	else
+	{
+		cout << "2";
+	}
+
+*/
+/*
+solution 2
+
+ifstream infile;
+	infile.open("dahab.in");
+	string t;
+	infile >> t;
+	cout << t.length();
+*/
 
 int main()
 {
-	problem3_B();
+	//a = 97
+	//z = 122
+
+	ifstream infile;
+	infile.open("string.in");
+
+	int t, sum=0;
+	
+	char c ;
+
+	infile >> t;
+
+	infile >> c;
+	/*
+	sum = int(c) + t;
+
+	if (sum > 122) {
+		sum = sum - 122 + 97 -1;
+	}
+	
+	cout << char(sum);*/
+
+	sum = int(c) + t - 97;
+	sum = sum % 26;
+
+	sum += 97;
+
+	cout << char(sum);
+
 	
 
 }
