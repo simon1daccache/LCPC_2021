@@ -3,12 +3,13 @@
 
 #include <iostream>
 #include <array>
-
+#include <string>
+#include <locale>
 using namespace std;
 
 int main()
 {
-
+/*
 	int arr[3][3] = { 17,24,1,8,15,19,21,7,14 };
 
 
@@ -98,7 +99,39 @@ int main()
 		cout << "not magic";
 	}
 
+	*/
+
+
+
 	
+	string str = "042241";
+	string nwstr = "";
+	bool found = false;
+	
+	for (int i = 0; i < str.length(); i++) {
+
+		for (int j = i+1; j < str.length(); j++) {
+			if (str[i] == str[j]) {
+				found = true;
+				break;
+			}
+
+		}
+		if (!found)
+		{
+			nwstr += str[i];
+		}
+		found = false;
+
+	}
+	
+
+
+
+	cout << nwstr;
+
+
+
 
 }
 
